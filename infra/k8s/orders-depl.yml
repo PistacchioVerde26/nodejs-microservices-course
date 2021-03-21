@@ -18,17 +18,17 @@ spec:
           resources:
             limits:
               memory: "256Mi"
-              cpu: "0.5"
+              cpu: "0.25"
             requests:
               memory: "128Mi"
-              cpu: "0.5"
+              cpu: "0.25"
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
             - name: NATS_URL
-              value: 'http://nats-srv:4222'
+              value: "http://nats-srv:4222"
             - name: NATS_CLUSTER_ID
               value: orders
             - name: MONGO_URI
